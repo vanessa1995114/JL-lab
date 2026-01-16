@@ -1,113 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lovell Lab Publications</title>
+    <meta charset="UTF-8" />
+    <title>Publications – Jonathan F. Lovell | University at Buffalo</title>
+    <meta name="keywords" content="Nanotechnology, Cancer Therapeutics, Porphyrins">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Modernized inline styles specifically for publications -->
     <style>
-        body {
+        #main_text {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
             font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f9f9f9;
-            color: #333;
+            line-height: 1.6;
         }
-        h1, h2 {
-            color: #224488;
+
+        h1 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
         }
+
         .pub-year {
-            margin-top: 40px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
+
         .publication {
-            margin: 10px 0;
+            margin-bottom: 1.8rem;
         }
-        .publication a {
-            color: #224488;
+
+        .manuscript_title {
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 0.2rem;
+        }
+
+        .author {
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .journal_date_link a {
+            color: #004FA3;
             text-decoration: none;
+            margin-right: 10px;
         }
-        .publication a:hover {
+
+        .journal_date_link a:hover {
             text-decoration: underline;
         }
-        .authors {
-            font-style: italic;
-        }
-        .journal {
-            font-weight: bold;
+
+        small a {
+            color: #004FA3;
         }
     </style>
 </head>
-    <header>
-    <div class="logo-container">
+
+<body>
+
+<div id="wrapper">
+
+    <!-- Banner -->
+    <div id="top_banner">
         <a href="index.html">
-            <img src="graphics/banner.jpg" class="logo" alt="Lovell Lab Banner">
+            <img src="graphics/banner.jpg" class="logo" alt="Jonathan F Lovell" title="Jonathan F Lovell" />
         </a>
     </div>
 
-    <nav>
-        <ul class="nav-links">
+    <!-- Navigation -->
+    <div id="links">
+        <ul>
             <li><a href="index.html">Main page</a></li>
-            <li><a href="research_interests.html" class="active">Research Interests</a></li>
-            <li><a href="publications.html">Publications</a></li>
+            <li><a href="research_interests.html">Research Interests</a></li>
+            <li><a href="publications.html" class="active">Publications</a></li>
             <li><a href="people.html">People</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>
-</header>
-<body>
-
-    <h1>Publications — Lovell Lab</h1>
-    <p>See also the <a href="https://scholar.google.com/citations?user=19ZgzrAAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar profile</a>.</p>
-
-    <!-- 2021 -->
-    <div class="pub-year">
-        <h2>2021</h2>
-    </div>
-    <div class="publication">
-        <span class="authors">Yang, Hughes, Kelkar, Yu, Cheng, Park, Huang, Lovell & Neelamegham</span> – 
-        <a href="https://doi.org" class="journal">Inhibition of SARS-CoV-2 viral entry upon blocking N- and O-glycan elaboration</a>
-    </div>
-    <div class="publication">
-        <span class="authors">Wan, Sun, Tian, Lu, Dai, Meng, Huang, He, Wu, Zhang, Jiang, Hu, Wu, Lovell, Jin & Yang</span> – 
-        <a href="https://doi.org" class="journal">Irradiated tumor cell-derived microparticles mediate tumor eradication via cell killing and immune reprogramming</a>
-    <!-- 2020 -->
-    <div class="pub-year">
-        <h2>2020</h2>
-    </div>
-    <div class="publication">
-        <span class="authors">Yang, Hughes, Kelkar, Yu, Cheng, Park, Huang, Lovell & Neelamegham</span> – 
-        <a href="https://doi.org" class="journal">Inhibition of SARS-CoV-2 viral entry upon blocking N- and O-glycan elaboration</a>
-    </div>
-    <div class="publication">
-        <span class="authors">Wan, Sun, Tian, Lu, Dai, Meng, Huang, He, Wu, Zhang, Jiang, Hu, Wu, Lovell, Jin & Yang</span> – 
-        <a href="https://doi.org" class="journal">Irradiated tumor cell-derived microparticles mediate tumor eradication via cell killing and immune reprogramming</a>
-    </div>
-    <!-- Add other 2020 publications here following the same structure -->
-    
-    <!-- 2019 -->
-    <div class="pub-year">
-        <h2>2019</h2>
-    </div>
-    <div class="publication">
-        <span class="authors">Yang, Lovell & Zhang</span> – 
-        <a href="https://doi.org" class="journal">Ingestible Contrast Agents for Gastrointestinal Imaging</a>
-    </div>
-    <div class="publication">
-        <span class="authors">Sun, Yan, Chang, Carter, Zhang, Slyker, Lovell, Wu & Cheng</span> – 
-        <a href="https://doi.org" class="journal">A multifunctional biodegradable brush polymer-drug conjugate for paclitaxel/gemcitabine co-delivery and tumor imaging</a>
-    </div>
-    <!-- Continue adding other years (2018, 2017, 2016, etc.) -->
-
-    <!-- Older Years (example) -->
-    <div class="pub-year">
-        <h2>2018</h2>
-    </div>
-    <div class="publication">
-        <span class="authors">Huang, Deng, Lin, Carter, Geng, Razi, He, Chitgupi, Federizon, Sun, Long, Ortega, Dutta, King, Miura, Lee & Lovell</span> – 
-        <a href="https://doi.org" class="journal">A Malaria Vaccine Adjuvant Based on Recombinant Antigen Binding to Liposomes</a>
     </div>
 
-    <!-- Continue years and entries as desired -->
+    <!-- Main Section -->
+    <div id="main_text">
+
+        <h1>Publications</h1>
+
+        <small>
+            See also the full <a href="https://scholar.google.com/citations?hl=en&user=19ZgzrAAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar profile</a>
+        </small>
+
+        <!-- 2020 Section -->
+        <div class="pub-year">2020</div>
+
+        <div class="publication">
+            <div class="manuscript_title">Inhibition of SARS-CoV-2 viral entry upon blocking N- and O-glycan elaboration</div>
+            <div class="author">Yang, Hughes, Kelkar, Yu, Cheng, Park, Huang, Lovell & Neelamegham</div>
+            <div class="journal_date_link">
+                <a href="https://doi.org/10.7554/eLife.61552">Elife, 2020</a>
+                <a href="pubs/Yang_Elife_2020.pdf">(pdf)</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="manuscript_title">Irradiated tumor cell-derived microparticles mediate tumor eradication via cell killing and immune reprogramming</div>
+            <div class="author">Wan, Sun, Tian, Lu, Dai, Meng, Huang, He, Wu, Zhang, Jiang, Hu, Wu, Lovell, Jin & Yang</div>
+            <div class="journal_date_link">
+                <a href="https://doi.org/10.1126/sciadv.aay9789">Sci Adv, 2020</a>
+                <a href="pubs/Wan_Sci Adv_2020.pdf">(pdf)</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="manuscript_title">A surfactant-stripped cabazitaxel micelle formulation optimized with accelerated storage stability</div>
+            <div class="author">Sun, Jing, Mabrouk, Zhang, Jin & Lovell</div>
+            <div class="journal_date_link">
+                <a href="https://doi.org/10.1080/10837450.2020.1818780">Pharm Dev Technol, 2020</a>
+                <span>(pdf pending)</span>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="manuscript_title">Engineered Nanoparticle Applications for Recombinant Influenza Vaccines</div>
+            <div class="author">Sia, Miller & Lovell</div>
+            <div class="journal_date_link">
+                <a href="https://doi.org/10.1021/acs.molpharmaceut.0c00383">Mol Pharm, 2020</a>
+                <a href="pubs/Sia_MolPharm_2020.pdf">(pdf)</a>
+            </div>
+        </div>
+
+    </div><!-- end main_text -->
+
+</div><!-- end wrapper -->
 
 </body>
 </html>
