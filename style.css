@@ -54,8 +54,8 @@ nav {
 }
 
 .slide img {
-    width: 100vw;
-    height: 400px;
+    width: 200vw;
+    height: 600px;
     object-fit: cover;
 }
 
