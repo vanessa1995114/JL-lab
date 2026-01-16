@@ -55,8 +55,8 @@ nav {
 
 .slide img {
     width: 100vw;
-    height: auto;
-    object-fit: contain;
+    height: 400px;
+    object-fit: cover;
 }
 
 @keyframes slide {
@@ -82,4 +82,35 @@ footer {
     text-align: center;
     padding: 20px;
     color: #777;
+}
+
+/* Container for each person */
+.person-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+/* This makes every SECOND box reverse its order (Image on Right) */
+.person-box:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+/* Standardizes all profile image sizes */
+.profile-img {
+    width: 250px;       /* Change this to your preferred width */
+    height: 250px;      /* Keep width and height the same for squares */
+    object-fit: cover;  /* Prevents stretching */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive: Stack them on top of each other on mobile phones */
+@media (max-width: 768px) {
+    .person-box, .person-box:nth-of-type(even) {
+        flex-direction: column;
+        text-align: center;
+    }
 }
