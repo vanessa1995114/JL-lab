@@ -99,8 +99,8 @@ footer {
 
 /* Standardizes all profile image sizes */
 .profile-img {
-    width: 250px;       /* Change this to your preferred width */
-    height: 250px;      /* Keep width and height the same for squares */
+    width: 160px;       /* Change this to your preferred width */
+    height: 160px;      /* Keep width and height the same for squares */
     object-fit: cover;  /* Prevents stretching */
     border-radius: 8px; /* Optional: adds rounded corners */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
