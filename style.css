@@ -51,19 +51,22 @@ nav {
 
 .slider {
     display: flex;
-    width: 500vw; /* 5 slides */
     animation: slide 25s infinite;
+    gap: 0;                /* Removes any gap between flex items */
+    width: max-content;    /* Crucial: Allows the container to be as wide as all images combined */
 }
 
 .slide {
-    min-width: 100vw;
+    flex: 0 0 auto;        /* Prevents slides from stretching or shrinking */
+    margin: 0;
+    padding: 0;
+    line-height: 0;        /* Removes potential text-based spacing */
 }
 
 .slide img {
-    width: auto;
-    height: 400px;
-    object-fit: contain; /* show full image */
-    display: block;    /* Removes small gaps at the bottom of images */
+    height: 400px;         /* Your fixed height */
+    width: auto;           /* Maintains original aspect ratio */
+    display: block;        /* Removes the "ghost" gap at the bottom */
 }
 
 @keyframes slide {
