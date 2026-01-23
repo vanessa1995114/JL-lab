@@ -69,5 +69,15 @@
 </footer>
 
 <script src="slider.js"></script>
+window.onload = function() {
+    const slider = document.querySelector('.slider');
+    const scrollWidth = slider.scrollWidth / 2; // Assuming you duplicated the slides
+    document.styleSheets[0].insertRule(`
+        @keyframes continuous-slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-${scrollWidth}px); }
+        }
+    `, 0);
+};
 </body>
 </html>
