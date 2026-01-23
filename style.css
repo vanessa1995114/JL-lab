@@ -51,14 +51,20 @@ nav {
 
 .slider {
     display: flex;
+    width: 500vw; /* 5 slides */
     animation: slide 25s infinite;
 }
 
-.slide img {
-    width: 100%;       /* Fills the width of the slider */
-    height: auto;      /* Proportions are kept; no stretching or cropping */
-    display: block;    /* Removes small gaps at the bottom of images */
+.slide {
+    min-width: 100vw;
 }
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* show full image */
+}
+
 @keyframes slide {
     0% { transform: translateX(0); }
     20% { transform: translateX(-100vw); }
