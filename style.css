@@ -56,9 +56,8 @@ nav {
 
 .slide img {
     width: 100% !important;
-    height: auto !important;
+    height: 450px !important;
     object-fit: contain !important;   /* key: no cropping */
-    display: block;
 }
 
 @keyframes slide {
