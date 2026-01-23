@@ -54,7 +54,7 @@ nav {
     display: flex;
     width: max-content; /* This is the secret—it shrinks the gap to zero */
     gap: 0;
-    animation: continuous-slide 20s linear infinite; /* 'linear' is key for smooth motion */
+    animation: continuous-slide 60s linear infinite; /* 'linear' is key for smooth motion */
 }
 
 .slider:hover {
