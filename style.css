@@ -44,9 +44,9 @@ nav {
 }
 
 .hero-slider {
-    width: 100%;
-    overflow: hidden;
-    margin: 20px 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 20px auto;
 }
 
 .slider {
@@ -55,9 +55,10 @@ nav {
 }
 
 .slide img {
-    width: 613px;
-    height: 460px;
-    object-fit: cover;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;   /* key: no cropping */
+    display: block;
 }
 
 @keyframes slide {
