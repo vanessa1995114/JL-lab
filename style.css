@@ -60,7 +60,7 @@ nav {
     object-fit: contain; /* The whole image will scale to fit inside the 400px height */
     background-color: #000; /* Optional: adds a background color to the empty side space */
 }
-
+}
 @keyframes slide {
     0% { transform: translateX(0); }
     20% { transform: translateX(-100vw); }
