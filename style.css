@@ -47,37 +47,39 @@ nav {
     width: 100%;
     overflow: hidden;
     margin: 20px 0;
+    background: #fff; /* Ensures no weird colors show behind images */
 }
 
 .slider {
     display: flex;
-    animation: slide 25s infinite;
-    gap: 0;                /* Removes any gap between flex items */
-    width: max-content;    /* Crucial: Allows the container to be as wide as all images combined */
+    width: max-content; /* This is the secret—it shrinks the gap to zero */
+    gap: 0;
+    animation: continuous-slide 60s linear infinite; /* 'linear' is key for smooth motion */
+}
+
+.slider:hover {
+    animation-play-state: paused; /* Allows users to stop and look at a photo */
 }
 
 .slide {
-    flex: 0 0 auto;        /* Prevents slides from stretching or shrinking */
-    margin: 0;
-    padding: 0;
-    line-height: 0;        /* Removes potential text-based spacing */
+    flex: 0 0 auto; /* Keeps each slide exactly the width of the image */
 }
 
 .slide img {
-    height: 400px;         /* Your fixed height */
-    width: auto;           /* Maintains original aspect ratio */
-    display: block;        /* Removes the "ghost" gap at the bottom */
+    height: 400px;  /* Your preferred height */
+    width: auto;    /* Maintains original ratio */
+    display: block; /* Removes the 3px gap at the bottom of images */
 }
 
-@keyframes slide {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(-100vw); }
-    40% { transform: translateX(-200vw); }
-    60% { transform: translateX(-300vw); }
-    80% { transform: translateX(-400vw); }
-    100% { transform: translateX(0); }
+@keyframes continuous-slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* This should be roughly the total width of your first 10 images */
+        transform: translateX(-50%); 
+    }
 }
-
 main {
     width: 90%;
     max-width: 900px;
