@@ -57,7 +57,7 @@ nav {
 .slide img {
     width: 613px;
     height: 460px;
-    /* object-fit: cover; */
+    object-fit: cover;
 }
 
 @keyframes slide {
