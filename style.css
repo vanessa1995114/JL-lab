@@ -63,6 +63,7 @@ nav {
     width: auto;
     height: 400px;
     object-fit: contain; /* show full image */
+    display: block;    /* Removes small gaps at the bottom of images */
 }
 
 @keyframes slide {
