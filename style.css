@@ -59,7 +59,6 @@ nav {
     height: auto;      /* Proportions are kept; no stretching or cropping */
     display: block;    /* Removes small gaps at the bottom of images */
 }
-}
 @keyframes slide {
     0% { transform: translateX(0); }
     20% { transform: translateX(-100vw); }
