@@ -159,6 +159,9 @@
         <h1>Group Photos</h1>
         <p>
             <section class="hero-slider">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                
                 <div class="slider">
                     <div class="slide"><img src="data1/images/labevent6.jpg" alt="Get Air 1-2025"></div>
                     <div class="slide"><img src="data1/images/labevent2.jpg" alt="Get Air 2-2025"></div>
@@ -478,4 +481,28 @@
             }
         `, 0);
     };
+
+let currentIndex = 0;
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+
+function moveSlide(direction) {
+    currentIndex += direction;
+
+    // Loop back to start or end
+    if (currentIndex >= slides.length) {
+        currentIndex = 0;
+    }
+    if (currentIndex < 0) {
+        currentIndex = slides.length - 1;
+    }
+
+    // Calculate how far to slide
+    let offset = 0;
+    for (let i = 0; i < currentIndex; i++) {
+        offset += slides[i].offsetWidth;
+    }
+
+    slider.style.transform = `translateX(-${offset}px)`;
+}
 </body>
