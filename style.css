@@ -44,21 +44,39 @@ nav {
 }
 
 .hero-slider {
+    position: relative; /* This allows buttons to be positioned absolutely */
     width: 100%;
     overflow: hidden;
-    margin: 20px 0;
-    background: #fff; /* Ensures no weird colors show behind images */
 }
 
 .slider {
     display: flex;
-    width: max-content; /* This is the secret—it shrinks the gap to zero */
+    transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
     gap: 0;
-    animation: continuous-slide 60s linear infinite; /* 'linear' is key for smooth motion */
 }
 
-.slider:hover {
-    animation-play-state: paused; /* Allows users to stop and look at a photo */
+/* Button Styling */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .slide {
