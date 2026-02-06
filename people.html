@@ -79,7 +79,7 @@
                 <h2>Yiting Song, PhD student</h2>
                 <p class="email">yitingso@buffalo.edu</p>
                 <p>
-                Yiting completed her MS at UB and is currently pursuing her PhD degree in Biomedical Engineering and studying neurodegenerative and infectious diseases.
+                Yiting completed her MS at UB and is currently pursuing her PhD degree in Biomedical Engineering and studying neurodegenerative and infectious diseases. She loves Chiikawa and owns many plushies.
                 </p>
             </div>
         </section>
@@ -112,7 +112,7 @@
                 <h2>Reuben Saamwan Pul, PhD student</h2>
                 <p class="email">reubenmw@buffalo.edu</p>
                 <p>
-                Reuben completed her MS from UB BME and is pursuing a PhD in Biomedical Engineering. He is working on vaccine development strategies for infectious diseases like Malaria, Dengue fever, Lassa fever, rotavirus and many more. Reuben enjoys playing soccer and listening to music in his free time.
+                Reuben completed his MS from UB BME and is pursuing a PhD in Biomedical Engineering. He is working on vaccine development strategies for infectious diseases like Malaria, Dengue fever, Lassa fever, rotavirus and many more. Reuben enjoys playing soccer and listening to music in his free time.
                 </p>
             </div>
         </section>
@@ -482,27 +482,27 @@
         `, 0);
     };
 
-let currentIndex = 0;
-const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.slide');
-
-function moveSlide(direction) {
-    currentIndex += direction;
-
-    // Loop back to start or end
-    if (currentIndex >= slides.length) {
-        currentIndex = 0;
-    }
-    if (currentIndex < 0) {
-        currentIndex = slides.length - 1;
-    }
-
-    // Calculate how far to slide
-    let offset = 0;
-    for (let i = 0; i < currentIndex; i++) {
-        offset += slides[i].offsetWidth;
-    }
-
-    slider.style.transform = `translateX(-${offset}px)`;
-}
+        let currentIndex = 0;
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        
+        function moveSlide(direction) {
+            currentIndex += direction;
+        
+            // Loop back to start or end
+            if (currentIndex >= slides.length) {
+                currentIndex = 0;
+            }
+            if (currentIndex < 0) {
+                currentIndex = slides.length - 1;
+            }
+        
+            // Calculate how far to slide
+            let offset = 0;
+            for (let i = 0; i < currentIndex; i++) {
+                offset += slides[i].offsetWidth;
+            }
+        
+            slider.style.transform = `translateX(-${offset}px)`;
+        }
 </body>
