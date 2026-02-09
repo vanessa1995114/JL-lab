@@ -44,60 +44,52 @@ nav {
 }
 
 .hero-slider {
-    position: relative; /* This allows buttons to be positioned absolutely */
+    position: relative; /* Required for button positioning */
     width: 100%;
     overflow: hidden;
+    background: #fff;
 }
 
 .slider {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+    transition: transform 0.5s ease-in-out; /* Makes the sliding smooth */
+    width: max-content;
     gap: 0;
 }
 
-/* Button Styling */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 16px;
-    border: none;
-    cursor: pointer;
-    z-index: 10;
-    font-size: 18px;
-    border-radius: 0 3px 3px 0;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
 .slide {
-    flex: 0 0 auto; /* Keeps each slide exactly the width of the image */
+    flex: 0 0 auto;
 }
 
 .slide img {
-    height: 400px;  /* Your preferred height */
-    width: auto;    /* Maintains original ratio */
-    display: block; /* Removes the 3px gap at the bottom of images */
+    height: 400px;
+    width: auto;
+    display: block;
 }
 
-@keyframes continuous-slide {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        /* This should be roughly the total width of your first 10 images */
-        transform: translateX(-50%); 
-    }
+/* Button Styling */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100; /* Keeps buttons on top of images */
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: 0.3s;
 }
+
+.prev-btn { left: 0; border-radius: 0 5px 5px 0; }
+.next-btn { right: 0; border-radius: 5px 0 0 5px; }
+
+.prev-btn:hover, .next-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
 main {
     width: 90%;
     max-width: 900px;
