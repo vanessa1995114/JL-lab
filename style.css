@@ -67,29 +67,6 @@ nav {
     display: block;
 }
 
-.people-slider {
-    position: relative; /* Required for button positioning */
-    width: 100%;
-    overflow: hidden;
-    background: #fff;
-}
-
-.p_slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Makes the sliding smooth */
-    width: max-content;
-    gap: 0;
-}
-
-.p_slide {
-    flex: 0 0 auto;
-}
-
-.p_slide img {
-    height: 400px;
-    width: auto;
-    display: block;
-}
 #wowslider-container1 {
     position: relative;
 }
