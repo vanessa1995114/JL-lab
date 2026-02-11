@@ -77,27 +77,57 @@ nav {
 #wowslider-container1 {
     position: relative;
 }
-/* Button Styling */
-.prev-btn, .next-btn {
+/* Modern Side Navigation Buttons */
+.prev-btn,
+.next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 100; /* Keeps buttons on top of images */
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+    z-index: 500;
+
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
     border: none;
-    padding: 20px 15px;
+
+    font-size: 30px;
+    color: white;
+
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+
     cursor: pointer;
-    font-size: 24px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
-.prev-btn { left: 0; border-radius: 0 5px 5px 0; }
-.next-btn { right: 0; border-radius: 5px 0 0 5px; }
-
-.prev-btn:hover, .next-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
+/* Position buttons */
+.prev-btn {
+    left: 20px;
 }
+
+.next-btn {
+    right: 20px;
+}
+
+/* Hover */
+.prev-btn:hover,
+.next-btn:hover {
+    background: #0056b3;   /* UB-style blue */
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Click effect */
+.prev-btn:active,
+.next-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
 
 
 
