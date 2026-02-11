@@ -4,7 +4,6 @@ const sliderStates = new Map();
 function moveSlide(direction, buttonElement) {
     // 1. Find the specific slider related to the clicked button
     const container = buttonElement.closest('.hero-slider');
-    const container = buttonElement.closest('.people-slider');
     const slider = container.querySelector('.slider');
     const slides = container.querySelectorAll('.slide');
     
