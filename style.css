@@ -77,50 +77,26 @@ nav {
 #wowslider-container1 {
     position: relative;
 }
-/* Large Modern Slider Buttons */
-.prev-btn,
-.next-btn {
+/* Button Styling */
+.prev-btn, .next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 200;
-
-    width: 70px;
-    height: 70px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    z-index: 100; /* Keeps buttons on top of images */
     background: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-
-    font-size: 32px;
-    font-weight: bold;
-
+    color: white;
     border: none;
-    border-radius: 50%;
-
+    padding: 20px 15px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    font-size: 24px;
+    transition: 0.3s;
 }
 
-/* Position inside slider */
-.prev-btn { left: 25px; }
-.next-btn { right: 25px; }
+.prev-btn { left: 0; border-radius: 0 5px 5px 0; }
+.next-btn { right: 0; border-radius: 5px 0 0 5px; }
 
-/* Hover effect */
-.prev-btn:hover,
-.next-btn:hover {
-    background: #0056b3;
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Click effect */
-.prev-btn:active,
-.next-btn:active {
-    transform: translateY(-50%) scale(0.95);
+.prev-btn:hover, .next-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 
