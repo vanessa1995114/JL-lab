@@ -50,6 +50,13 @@ nav {
     background: #fff;
 }
 
+.people-slider {
+    position: relative; /* Required for button positioning */
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+}
+
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out; /* Makes the sliding smooth */
